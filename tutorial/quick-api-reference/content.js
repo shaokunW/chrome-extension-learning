@@ -1,5 +1,7 @@
 (async () => {
+  // Sends a message to the service worker and receives a tip in response
   const { tip } = await chrome.runtime.sendMessage({ greeting: "tip" });
+
   const nav = document.querySelector(".upper-tabs > nav");
 
   const tipWidget = createDomElement(`
@@ -11,6 +13,7 @@
   const popover = createDomElement(
     `<div id='tip-popover' popover style="margin: auto;">${tip}</div>`
   );
+
   document.body.append(popover);
   nav.append(tipWidget);
 })();

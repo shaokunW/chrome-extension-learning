@@ -1,4 +1,3 @@
-console.log("sw-omnibox.js");
 const URL_CHROME_EXTENSIONS_DOC =
   "https://developer.chrome.com/docs/extensions/reference/";
 const NUMBER_OF_PREVIOUS_SEARCHES = 4;
